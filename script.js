@@ -1,9 +1,6 @@
-import {
-	ContactForm
-} from './ContactForm.js';
-import {
-	LearnMoreIntro
-} from './Intro.js';
+import {ContactForm} from './ContactForm.js';
+import {LearnMoreIntro} from './Intro.js';
+import './ProjectTemplate.js';
 
 ////////////////// Intro //////////////////
 
@@ -30,6 +27,46 @@ welcomeButtons.forEach(icon => {
 		learnMore(icon.className)
 	});
 });
+
+////////////////// Projects //////////////////
+
+// Fills the site with my projects.
+let createProjects = () => {
+
+	// The grid to add projects to.
+	let projectsGrid = document.querySelector('.projects-grid');
+
+	// Array of projects
+	let projects = [
+		{
+			// Software Architecture 
+			name: "Software Architecture Project",
+			link: "https://budgetplanner-2021.azurewebsites.net",
+			src: "photo-BudgetPlannerPhoto.png"
+		},
+		{
+			// example
+			name: "example project",
+			link: "",
+			src: "https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+		},
+		{
+			// example
+			name: "example project",
+			link: "",
+			src: "https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+		}
+	];
+
+	// Adds a new project template to the grid for each one in the array
+	projects.forEach(p => {
+		let template = document.createElement('project-template');
+		template.project = p;
+		projectsGrid.appendChild(template);
+	});
+};
+
+createProjects();
 
 ////////////////// Contact Form //////////////////
 
@@ -85,6 +122,7 @@ let DisplayForm = () => {
 
 		// Fill new form, attach events and validate inputs.
 		contactForm = new ContactForm(
+			// Form tag
 			`<form class=\"contact-form\"><div class=\"form-title\">Contact Information</div><div class=\"form-body\"><div class=\"row\"><input class=\"first-name\" type=\"text\" placeholder=\"First Name*\"><input class=\"last-name\" type=\"text\" placeholder=\"Last Name*\"></div><div class=\"row\"><input class=\"phone\" type=\"tel\" placeholder=\"715 123-456*\"><input class=\"email\" type=\"email\" placeholder=\"Email Address*\"></div><div class=\"row\"><input class=\"comments\" type=\"text\" placeholder=\"Comments*\"></div></div><div class=\"rule\"></div><div class=\"form-footer\"><a type=\"submit\" class=\"formA submit\">Submit<span class=\"fa fa-thumbs-o-up\"></span></a><a class=\"formA cancel\">Cancel<span class=\"fa fa-ban\"></span></a></div></form>`
 		);
 		newForm.innerHTML = contactForm.CreateForm();
