@@ -1,0 +1,3 @@
+{
+    "FormTag": "<form class=\"contact-form\"><div class=\"form-title\">Contact Information</div><div class=\"form-body\"><div class=\"row\"><input class=\"first-name\" type=\"text\" placeholder=\"First Name*\"><input class=\"last-name\" type=\"text\" placeholder=\"Last Name*\"></div><div class=\"row\"><input class=\"phone\" type=\"tel\" placeholder=\"715 123-456*\"><input class=\"email\" type=\"email\" placeholder=\"Email Address*\"></div><div class=\"row\"><input class=\"comments\" type=\"text\" placeholder=\"Comments*\"></div></div><div class=\"rule\"></div><div class=\"form-footer\"><a type=\"submit\" class=\"formA submit\">Submit<span class=\"fa fa-thumbs-o-up\"></span></a><a class=\"formA cancel\">Cancel<span class=\"fa fa-ban\"></span></a></div></form>"
+}
