@@ -26,7 +26,9 @@ let welcomeButtons = [schooButton, basketballButton, familyButton, petsButton, t
 
 // Add a click event to each button in the welcome section
 welcomeButtons.forEach(icon => {
-	icon.addEventListener("click", function() {learnMore(icon.className)});
+	icon.addEventListener("click", function () {
+		learnMore(icon.className)
+	});
 });
 
 ////////////////// Contact Form //////////////////
@@ -76,20 +78,20 @@ let DisplayForm = () => {
 	let form = document.querySelector(".contact-form");
 
 	if (form == null) {
-		fetch("ContactForm.json").then(response => response.json()).then(data => {
-			// Create new div to hold a contact form
-			let newForm = document.createElement("div");
-			newForm.classList.add("card-form");
-			newForm.style.borderRadius = "10px";
+		// Create new div to hold a contact form
+		let newForm = document.createElement("div");
+		newForm.classList.add("card-form");
+		newForm.style.borderRadius = "10px";
 
-			// Fill new form, attach events and validate inputs.
-			contactForm = new ContactForm(data.FormTag);
-			newForm.innerHTML = contactForm.CreateForm();
+		// Fill new form, attach events and validate inputs.
+		contactForm = new ContactForm(
+			`<form class=\"contact-form\"><div class=\"form-title\">Contact Information</div><div class=\"form-body\"><div class=\"row\"><input class=\"first-name\" type=\"text\" placeholder=\"First Name*\"><input class=\"last-name\" type=\"text\" placeholder=\"Last Name*\"></div><div class=\"row\"><input class=\"phone\" type=\"tel\" placeholder=\"715 123-456*\"><input class=\"email\" type=\"email\" placeholder=\"Email Address*\"></div><div class=\"row\"><input class=\"comments\" type=\"text\" placeholder=\"Comments*\"></div></div><div class=\"rule\"></div><div class=\"form-footer\"><a type=\"submit\" class=\"formA submit\">Submit<span class=\"fa fa-thumbs-o-up\"></span></a><a class=\"formA cancel\">Cancel<span class=\"fa fa-ban\"></span></a></div></form>`
+		);
+		newForm.innerHTML = contactForm.CreateForm();
 
-			// Add new div to end of contact section
-			contactSection.append(newForm);
-			AddEvents(newForm);
-		})
+		// Add new div to end of contact section
+		contactSection.append(newForm);
+		AddEvents(newForm);
 	}
 };
 

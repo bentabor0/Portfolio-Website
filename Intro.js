@@ -70,7 +70,7 @@ export class LearnMoreIntro {
 	LearnMoreClick(name) {
 
 		// Fetch paragaph data from json file.
-		fetch("LearnMore.json").then(response => response.json()).then(data => {
+		fetch("IntroCollection.json").then(response => response.json()).then(data => {
 
 			// Each case calls the same three functions, passing in the new paragaph data.
 			switch (name) {
