@@ -146,13 +146,15 @@ img {
 
 .learn-more-list li {
     display: inline;
-    font-size: 2em;
+    font-size: 1em;
+    margin-right: 2rem;
     transition: font-size .8s ease-in-out;
 }
 
 .learn-more-list li:hover {
-    font-size: 4em;
+    font-size: 1.5em;
     transition: font-size .8s ease-in-out;
+    background: #65be31;
 }
 
 .intro {
@@ -184,20 +186,34 @@ img {
 }
 
 .show-more {
-    padding: 10px;
+    /* padding: 10px; */
     margin: 30px;
     text-indent: 5%;
 }
 
 .fade-in {
     opacity: 1;
-    transition: opacity 1s linear;
+    transition: opacity 1.5s linear;
     animation: fadeIn;
 }
 
 .fade-out {
     opacity: 0;
-    transition: opacity 1s linear;
+    transition: opacity 1.5s linear;
+}
+
+.movetxt {
+    -webkit-animation: moving 2s infinite;
+    animation: moving 2s;
+}
+
+.txtmoved {
+    transform: translateY(200px);
+}
+
+@keyframes moving {
+    from {transform: translateY(0px);}
+    to {transform: translateY(200px);}
 }
 
 /* intro animations */

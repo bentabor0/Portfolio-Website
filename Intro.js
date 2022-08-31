@@ -2,6 +2,7 @@ export class LearnMoreIntro {
 	introButton = document.querySelector(".intro-button");
 	welcomeSection = document.querySelector(".welcome-section");
 	welcomeParagraph = document.querySelector(".intro");
+    nav = document.querySelector(".learn-more-nav")
 
 	constructor(IsSentence) {
 		this.IsSentence = IsSentence;
@@ -12,6 +13,8 @@ export class LearnMoreIntro {
 
 		// Add class to welcome paragraph to fade text out.
 		this.welcomeParagraph.classList.add('fade-out');
+        // this.nav.classList.add('movetxt')
+        // this.introButton.classList.add('movetxt')
 
 		// After 1 second, change the <p>'s text, fade in the new text, and change the <p>'s style.
 		setTimeout(() => {
@@ -19,6 +22,14 @@ export class LearnMoreIntro {
 			this.welcomeParagraph.classList.remove('fade-out');
 			this.welcomeParagraph.classList.add('show-more', 'fade-in');
 		}, 1000);
+
+        // // After 1 second, change the <p>'s text, fade in the new text, and change the <p>'s style.
+		// setTimeout(() => {
+        //     this.nav.classList.remove('movetxt')
+        //     this.nav.classList.add('txtmoved')
+        //     this.introButton.classList.remove('movetxt')
+        //     this.introButton.classList.add('txtmoved')
+		// }, 1500);
 	}
 
 	// Adds a click event to the button below the icons.
@@ -95,16 +106,15 @@ export class LearnMoreIntro {
 					this.AddEvent(data.ShortIntro);
 					break;
 
-				case 'pets':
+				case 'WhatsNew':
 
-					this.UpdateIntro(data.Pets);
+					this.UpdateIntro(data.WhatsNew);
 					this.UpdateButton(this.IsSentence);
 					this.AddEvent(data.ShortIntro);
 					break;
 
 				case 'hobbies':
-
-					this.UpdateIntro(data.Trumpet);
+					this.UpdateIntro(data.Hobbies);
 					this.UpdateButton(this.IsSentence);
 					this.AddEvent(data.ShortIntro);
 					break;

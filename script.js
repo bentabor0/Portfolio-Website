@@ -13,16 +13,16 @@ let learnMore = (name) => {
 
 // Get icons from welcome section
 let schooButton = document.querySelector(".school");
-let basketballButton = document.querySelector(".sports");
 let familyButton = document.querySelector(".family");
-let petsButton = document.querySelector(".pets");
-let trumpetButton = document.querySelector(".hobbies");
+let hobbiesButton = document.querySelector(".hobbies");
+let newButton = document.querySelector(".WhatsNew");
 
 // Create array of welcome buttons
-let welcomeButtons = [schooButton, basketballButton, familyButton, petsButton, trumpetButton];
+let welcomeButtons = [schooButton, familyButton, hobbiesButton, newButton];
 
 // Add a click event to each button in the welcome section
 welcomeButtons.forEach(icon => {
+    console.log(icon)
 	icon.addEventListener("click", function () {
 		learnMore(icon.className)
 	});
