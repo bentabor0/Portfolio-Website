@@ -139,21 +139,33 @@ img {
     transition: ease 2s;
 }
 
+.hello {
+    position: absolute;
+    transform: translateY(-100px);
+}
+
+.learn-more-nav{
+    transition: ease 2s;
+}
+
+
 .learn-more-list {
+    display: flex;
+    margin-right: 2rem;
     padding-top: 50px;
-    padding-bottom: 10px;
 }
 
 .learn-more-list li {
-    display: inline;
+    display: block;
     font-size: 1em;
-    margin-right: 2rem;
-    transition: font-size .8s ease-in-out;
+    padding: 2rem;
+    border-bottom: 1rem solid #7d4561;
+    transition: font-size .5s ease-in-out;
 }
 
 .learn-more-list li:hover {
     font-size: 1.5em;
-    transition: font-size .8s ease-in-out;
+    transition: font-size .5s ease-in-out;
     background: #65be31;
 }
 
@@ -164,21 +176,21 @@ img {
     color: var(--main-green);
     transition: ease 2s;
     display: block;
+    position: absolute;
+    transform: translateY(-50px);
 }
 
 .intro-button {
-    padding-top: 5px;
     font-size: 1em;
     font-style: italic;
     color: grey;
+    transition: ease 2s;
 }
 
 .go-back {
-    padding-top: 5px;
-    font-size: 1.25em;
     color: #f0f0f0;
-    /* background: #65be31; */
     padding: 5px;
+    transition: ease 2s;
 }
 
 .go-back:hover {
@@ -186,46 +198,75 @@ img {
 }
 
 .show-more {
-    /* padding: 10px; */
     margin: 30px;
     text-indent: 5%;
+    position: absolute;
+}
+
+.show-less {
+    position: absolute;
+    /* transform: translateY(-100px); */
 }
 
 .fade-in {
     opacity: 1;
-    transition: opacity 1.5s linear;
-    animation: fadeIn;
+    transition: opacity 1 linear;
+    transform: translateY(100px);
+    /* position: absolute; */
 }
 
 .fade-out {
     opacity: 0;
-    transition: opacity 1.5s linear;
+    transform: translateY(-100px);
+    transition: opacity 1 linear;
+}
+
+.fade-in-no-move {
+    opacity: 1;
+    transition: opacity 1 linear;
+}
+
+.fade-out-no-move {
+    opacity: 0;
+    transition: opacity 1 linear;
 }
 
 .movetxt {
-    -webkit-animation: moving 2s infinite;
+    -webkit-animation: moving 2s;
     animation: moving 2s;
 }
 
+.reversetxt {
+    -webkit-animation: reset 2s;
+    animation: reset 2s;
+}
+
+.txtreset {
+    transform: translateY(0px);
+}
+
 .txtmoved {
-    transform: translateY(200px);
+    transform: translateY(300px);
+}
+
+@keyframes reset {
+    from {transform: translateY(300px);}
+    to {transform: translateY(0px);}
 }
 
 @keyframes moving {
     from {transform: translateY(0px);}
-    to {transform: translateY(200px);}
+    to {transform: translateY(300px);}
 }
 
-/* intro animations */
-@keyframes fadeOut {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+.test {
+    transform: translateY(-50px);
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+.test2 {
+    transform: translateY(-50px);
 }
+
 
 
 
