@@ -2,7 +2,8 @@ export class LearnMoreIntro {
     introButton = document.querySelector(".intro-button");
     welcomeSection = document.querySelector(".welcome-section");
     welcomeParagraph = document.querySelector(".intro");
-    nav = document.querySelector(".learn-more-nav")
+    nav = document.querySelector(".learn-more-nav");
+    hello = document.querySelector(".hello");
 
     constructor(IsSentence) {
         this.IsSentence = IsSentence;
@@ -10,6 +11,8 @@ export class LearnMoreIntro {
 
     // Updates the intro <p> to display the short intro or one of 5 longer intros. 
     UpdateIntro(data) {
+
+        console.log('welcome fade')
 
         // Add class to welcome paragraph to fade text out.
         this.welcomeParagraph.classList.add('fade-out');
@@ -46,6 +49,7 @@ export class LearnMoreIntro {
 
             this.nav.classList.add('reversetxt');
             this.introButton.classList.add('reversetxt');
+            // this.hello.classList.add('reverse-hello')
 
             // After 1 second, fade paragaph and button back in with updated changes.
             setTimeout(() => {                
@@ -59,6 +63,9 @@ export class LearnMoreIntro {
                 this.introButton.innerHTML = "(Click the buttons to learn more about me)";
                 this.introButton.classList.remove('go-back', 'fade-out-no-move', 'reversetxt', 'txtmoved');
                 this.introButton.classList.add('intro-button', 'fade-in-no-move', 'txtreset');
+
+                // this.hello.classList.remove('reverse-hello');
+                // this.hello.classList.add('hello-reset');
             }, 2000);
 
             setTimeout(() => {                
@@ -84,10 +91,12 @@ export class LearnMoreIntro {
 
         // Update button if the IsSentence variable is true.
         if (IsSentence) {
-
+            console.log('move hit')
             // After 1 second, fade out the intro to a button.
             this.nav.classList.add('movetxt')
             this.introButton.classList.add('movetxt', 'fade-out-no-move')
+
+            // this.hello.classList.add('move-hello');
             
             setTimeout(() => {
                 this.introButton.innerHTML = "Click here to minimize";
@@ -96,6 +105,9 @@ export class LearnMoreIntro {
 
                 this.nav.classList.remove('movetxt');
                 this.nav.classList.add('txtmoved');
+
+                // this.hello.classList.remove('move-hello');
+                // this.hello.classList.add('hello-moved');
             }, 2000);
 
             // Update isSentence variable.

@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <style>
+      body {
+        background: none;
+      }
+    </style>
     <title>Tabor Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js" defer></script>
@@ -49,7 +55,7 @@
     <section id="welcome-section" class="welcome-section">
       <h1 class="hello">Hello, I am Ben Tabor</h1>
       <p class="intro">a software developer student</p>
-      <div>
+      <div class="hidden-xs">
         <nav class="learn-more-nav">
             <ul class="learn-more-list">
               <li class="school">Education</li>
@@ -59,7 +65,7 @@
             </ul>
           </nav>
       </div>
-      <p class="intro-button">(Click the buttons to learn more about me)</p>
+      <p class="intro-button hidden-xs">(Click the buttons to learn more about me)</p>
     </section>
 
     <!-- Projects Section -->
