@@ -166,15 +166,15 @@ img {
 .learn-more-list li {
     display: block;
     font-size: 1em;
-    padding: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     border-bottom: 1rem solid #7d4561;
-    transition: font-size .5s ease-in-out;
+    transition: background 1s ease-in-out, transform 0.3s ease-out;
 }
 
 .learn-more-list li:hover {
-    font-size: 1.5em;
-    transition: font-size .5s ease-in-out;
     background: #65be31;
+    transform: translateY(8px);
+
 }
 
 .intro {
@@ -198,8 +198,9 @@ img {
 
 .go-back {
     color: #f0f0f0;
+    border-radius: 5%;
     padding: 5px;
-    transition: ease 2s;
+    transition: ease 1s;
 }
 
 .go-back:hover {
@@ -207,7 +208,7 @@ img {
 }
 
 .show-more {
-    margin: 30px;
+    margin: 50px;
     text-indent: 5%;
     position: absolute;
 }

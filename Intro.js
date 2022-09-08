@@ -12,11 +12,8 @@ export class LearnMoreIntro {
     // Updates the intro <p> to display the short intro or one of 5 longer intros. 
     UpdateIntro(data) {
 
-        console.log('welcome fade')
-
         // Add class to welcome paragraph to fade text out.
         this.welcomeParagraph.classList.add('fade-out');
-
 
         // After 1 second, change the <p>'s text, fade in the new text, and change the <p>'s style.
         setTimeout(() => {
@@ -24,14 +21,6 @@ export class LearnMoreIntro {
             this.welcomeParagraph.classList.remove('fade-out');
             this.welcomeParagraph.classList.add('show-more', 'fade-in');
         }, 2000);
-
-        // // After 1 second, change the <p>'s text, fade in the new text, and change the <p>'s style.
-        // setTimeout(() => {
-        //     this.nav.classList.remove('movetxt')
-        //     this.nav.classList.add('txtmoved')
-        //     this.introButton.classList.remove('movetxt')
-        //     this.introButton.classList.add('txtmoved')
-        // }, 2000);
     }
 
     // Adds a click event to the button below the icons.
@@ -63,26 +52,13 @@ export class LearnMoreIntro {
                 this.introButton.innerHTML = "(Click the buttons to learn more about me)";
                 this.introButton.classList.remove('go-back', 'fade-out-no-move', 'reversetxt', 'txtmoved');
                 this.introButton.classList.add('intro-button', 'fade-in-no-move', 'txtreset');
-
-                // this.hello.classList.remove('reverse-hello');
-                // this.hello.classList.add('hello-reset');
-            }, 2000);
+            }, 1900);
 
             setTimeout(() => {                
                 this.welcomeParagraph.classList.remove('fade-in', 'test');
                 this.introButton.classList.remove('txtreset', 'fade-in-no-move');
                 this.nav.classList.remove('txtreset');
             }, 2001);
-
-            
-            // setTimeout(() => {
-                
-
-            //     this.nav.classList.remove('reversetxt', 'txtmoved');
-            //     this.nav.classList.add('txtreset');
-            //     this.introButton.classList.remove('reversetxt', 'txtmoved');
-            //     this.introButton.classList.add('txtreset');
-            // }, 4000);
         });
     }
 
@@ -105,10 +81,7 @@ export class LearnMoreIntro {
 
                 this.nav.classList.remove('movetxt');
                 this.nav.classList.add('txtmoved');
-
-                // this.hello.classList.remove('move-hello');
-                // this.hello.classList.add('hello-moved');
-            }, 2000);
+            }, 1900);
 
             // Update isSentence variable.
             this.IsSentence = false;
@@ -158,9 +131,5 @@ export class LearnMoreIntro {
                     break;
             }
         })
-
-        console.log(this.welcomeParagraph.classList)
-        console.log(this.introButton.classList)
-        console.log(this.nav.classList)
     }
 }
