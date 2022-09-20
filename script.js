@@ -38,23 +38,29 @@ let createProjects = () => {
 
 	// Array of projects
 	let projects = [
-		{
-			// Software Architecture 
-			name: "Software Architecture Project",
-			link: "https://budgetplanner-2021.azurewebsites.net",
-			src: "photo-BudgetPlannerPhoto.png"
+        {
+			// example
+			name: "Portfolio",
+			link: "https://github.com/bentabor0",
+			src: "portfolio-photo.PNG"
 		},
 		{
 			// example
 			name: "Pet Store",
 			link: "https://github.com/bentabor0/Pet-Store-Project",
-			src: "Pet-Store.PNG"
+			src: "ouan.PNG"
 		},
 		{
 			// example
 			name: "Spoonacular API",
 			link: "https://github.com/bentabor0/Spoonacular-API-Assistant",
 			src: "spoonacular.PNG"
+		},
+        {
+			// Software Architecture 
+			name: "Software Architecture Project",
+			link: "https://budgetplannertabor.azurewebsites.net/",
+			src: "bp.PNG"
 		}
 	];
 
