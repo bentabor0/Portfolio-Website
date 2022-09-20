@@ -46,15 +46,15 @@ let createProjects = () => {
 		},
 		{
 			// example
-			name: "example project",
-			link: "",
-			src: "https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+			name: "Pet Store",
+			link: "https://github.com/bentabor0/Pet-Store-Project",
+			src: "Pet-Store.PNG"
 		},
 		{
 			// example
-			name: "example project",
-			link: "",
-			src: "https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
+			name: "Spoonacular API",
+			link: "https://github.com/bentabor0/Spoonacular-API-Assistant",
+			src: "spoonacular.PNG"
 		}
 	];
 
@@ -133,4 +133,35 @@ let DisplayForm = () => {
 	}
 };
 
-formButton.addEventListener("click", DisplayForm);
+// formButton.addEventListener("click", DisplayForm);
+
+const mouseCursor = document.getElementById("mouse_cursor");
+
+let cursorX = 0,
+  cursorY = 0,
+  currentX = 0,
+  currentY = 0;
+
+function lerp(start, end, t) {
+  return start * (1 - t) + end * t;
+}
+
+window.addEventListener("mousemove", (e) => {
+  mouseCursor.style.display = "inline-block";
+  cursorX = e.clientX;
+  cursorY = e.clientY;
+});
+
+function styling(s) {
+  mouseCursor.style.width = `${s}px`;
+  mouseCursor.style.height = `${s}px`;
+}
+
+function animate() {
+  currentX = lerp(currentX, cursorX, 0.05);
+  currentY = lerp(currentY, cursorY, 0.05);
+  mouseCursor.style.transform = `translate(calc(-50% + ${currentX}px), calc(-50% + ${currentY}px)) `;
+  requestAnimationFrame(animate);
+}
+
+animate();

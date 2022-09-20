@@ -105,6 +105,7 @@ img {
     background: var(--main-green);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
+    height: 6.1%;
 }
 
 .nav-list {
@@ -557,4 +558,20 @@ footer i {
         text-align: center;
     }
 }
+
+#mouse_cursor {
+    position: fixed;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    mix-blend-mode: difference;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: var(--main-green);
+    overflow: hidden;
+    display: none;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  }
 
