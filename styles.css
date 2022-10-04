@@ -105,7 +105,6 @@ img {
     background: var(--main-green);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
-    height: 6.1%;
 }
 
 .nav-list {
@@ -127,10 +126,12 @@ img {
     display: block;
     font-size: 2.2rem;
     padding: 2rem;
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-list a:hover {
     background: var(--main-purple);
+    transform: translateY(10px);
 }
 
 /* Welcome section */
@@ -256,17 +257,17 @@ img {
 }
 
 .txtmoved {
-    transform: translateY(400px);
+    transform: translateY(300px);
 }
 
 @keyframes reset {
-    from {transform: translateY(400px);}
+    from {transform: translateY(300px);}
     to {transform: translateY(50px);}
 }
 
 @keyframes moving {
     from {transform: translateY(50px);}
-    to {transform: translateY(400px);}
+    to {transform: translateY(300px);}
 }
 
 .test {
@@ -275,6 +276,14 @@ img {
 
 .test2 {
     transform: translateY(-50px);
+}
+
+.family-photo{
+    transform: scale(0.2);
+}
+
+.here {
+    color: black;
 }
 
 /* */

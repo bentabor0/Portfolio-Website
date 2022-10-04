@@ -10,7 +10,7 @@ export class LearnMoreIntro {
     }
 
     // Updates the intro <p> to display the short intro or one of 5 longer intros. 
-    UpdateIntro(data) {
+    UpdateIntro(data, isPhoto) {
 
         // Add class to welcome paragraph to fade text out.
         this.welcomeParagraph.classList.add('fade-out');
@@ -18,6 +18,13 @@ export class LearnMoreIntro {
         // After 1 second, change the <p>'s text, fade in the new text, and change the <p>'s style.
         setTimeout(() => {
             this.welcomeParagraph.innerHTML = data;
+
+            if (isPhoto) {
+                var p = document.createElement('p');
+                p.innerHTML = "Click <a href=" + "family.jpg" + ">here</a>" + " to see the pets!"
+                this.welcomeParagraph.appendChild(p);
+            }
+
             this.welcomeParagraph.classList.remove('fade-out');
             this.welcomeParagraph.classList.add('show-more', 'fade-in');
         }, 2000);
@@ -112,7 +119,7 @@ export class LearnMoreIntro {
 
                 case 'family':
 
-                    this.UpdateIntro(data.Family);
+                    this.UpdateIntro(data.Family, true);
                     this.UpdateButton(this.IsSentence);
                     this.AddEvent(data.ShortIntro);
                     break;
