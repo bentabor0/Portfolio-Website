@@ -61,7 +61,12 @@ let createProjects = () => {
 			name: "Software Architecture Project",
 			link: "https://budgetplannertabor.azurewebsites.net/",
 			src: "bp.PNG"
-		}
+		},
+        {
+            name: "Spoonacular Web App",
+            link: "https://spoonacular.azurewebsites.net/",
+            src: ""
+        }
 	];
 
 	// Adds a new project template to the grid for each one in the array
